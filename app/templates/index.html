@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block body %}
+<div class="jumbotron">
+	<h1 class="text-center">English As She Is Spoke 2.0</h1>
+	<p class="lead text-center">Interactive Mode</p>
+
+	<form class="form">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="input-group">
+					<label class="sr-only" for="sentence">Type a sentence</label>
+					<input type="text" class="form-control" id="sentence" placeholder="Type a sentence">
+					<span class="input-group-btn">
+						<button type="submit" class="btn btn-primary" type="button"><i class="fas fa-globe-americas"></i> Translate</button>
+					</span>	
+				</div>
+			</div>
+		</div>
+	</form>
+	
+	<div id="spinner" class="row" style="display:none">
+		<div class="col-md-2 col-md-offset-5">
+			<div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+		</div>
+	</div>
+
+	<br>
+	<div id="result" class="alert" role="alert" style="display:none;">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="well inline-headers">
+					<h2>English as she is spoke: </h2>
+					<p id="en"></p>	
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-primary" style="margin-bottom: -4em">
+			<div class="panel-heading"><strong>Intermediary Steps:</strong></div>
+			<ul class="list-group">
+				<li class="list-group-item" id="af">Afrikaans: </p></li>
+				<li class="list-group-item" id="de">German: </li>
+				<li class="list-group-item" id="pt">Portuguese: </li>
+				<li class="list-group-item" id="pl">Polish: </li>
+				<li class="list-group-item" id="zh">Chinese: </li>
+				<li class="list-group-item" id="fr">French: </li>
+				<li class="list-group-item" id="fi">Finnish: </li>
+				<li class="list-group-item" id="it">Italian: </li>
+				<li class="list-group-item" id="tr">Turkish: </li>
+			</ul>
+		</div>
+	</div>
+	<div id="errorAlert" class="alert alert-danger" role="alert" style="display:none;"></div>
+</div>
+{% endblock %}
