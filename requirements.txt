@@ -1,5 +1,5 @@
 Flask==0.12.2
-Flask-Cors==3.0.3
+Flask-Cors==3.0.9
 googletrans==2.4.0
 gunicorn==19.9.0
 Jinja2==2.10
